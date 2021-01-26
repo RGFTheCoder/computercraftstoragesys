@@ -1,0 +1,18 @@
+{
+	"Lua.diagnostics.globals": [
+		"peripheral",
+		"term",
+		"window",
+		"keys",
+		"shell",
+		"colours",
+		"fs",
+		"settings",
+		"printError",
+		"textutils",
+		"write",
+		"http",
+		"_ENV"
+	],
+	"Lua.runtime.version": "Lua 5.1"
+}
