@@ -140,10 +140,10 @@ function out.findSpace(id, amount) --
     return false
 end
 
-StorageIndex.userInterface = peripheral.wrap("minecraft:shulker_box_1")
+StorageIndex.userInterface = ("minecraft:shulker_box_1")
 
 function out.withdraw(id, amount, interf)
-    local interface = peripheral.wrap(interf) or StorageIndex.userInterface
+    local interface = peripheral.wrap(interf or StorageIndex.userInterface)
     local req = out.requestItem(id, amount)
     if not req then return false end
     out.removeItems(req)
@@ -155,7 +155,7 @@ function out.withdraw(id, amount, interf)
 end
 
 function out.deposit(interf)
-    local interface = peripheral.wrap(interf) or StorageIndex.userInterface
+    local interface = peripheral.wrap(interf or StorageIndex.userInterface)
     local items = interface.list()
 
     for i, item in pairs(items) do
